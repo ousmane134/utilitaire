@@ -15,23 +15,26 @@ public class operationTest {
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 		
-		System.out.println("======DEBUT DES TESTS=====");
+		
+	
 	}
 
 	@AfterClass
 	public static void tearDownAfterClass() throws Exception {
-		System.out.print("======FIN DES TESTS=====");
+		//System.out.print("======FIN DES TESTS=====");
 	}
 
 	@Before
 	public void setUp() throws Exception {
+		System.out.println("======DEBUT DES TESTS=====");
 		a = 1;
 		b = 3;
-		operation op = new operation(a,b);
+	  // operation op = new operation(a,b);
 	}
 
 	@After
 	public void tearDown() throws Exception {
+		System.out.println("======FIN DES TESTS=====");
 	}
 
 	
@@ -42,6 +45,7 @@ public class operationTest {
 		operation op = new operation(a,b);
 		int result = op.somme(a, b);
 		assertEquals(result, 4);
+		assertFalse(result == 2);
 		
 	}
 	
@@ -50,6 +54,7 @@ public class operationTest {
 		operation op = new operation(a,b);
 		int result = op.soustraction(a, b);
 		assertEquals(result, -2);
+		assertFalse(result == 0);
 		
 	}
 	
@@ -58,6 +63,7 @@ public class operationTest {
 		operation op = new operation(a,b);
 		int result = op.modulo(a,b);
 		assertEquals(result, 1);
+		assertFalse(result == 0);
 		
 	}
 	
@@ -68,6 +74,7 @@ public class operationTest {
 		int result = op.multiplication(a,b);
 ;
 		assertEquals(result, 3);
+		assertFalse(result == 0);
 		
 	}
 
