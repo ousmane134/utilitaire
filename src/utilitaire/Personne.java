@@ -16,21 +16,25 @@ public class Personne {
 		m_nom = nom;
 		m_prenom = prenom;
 		m_sexe = sexe;
+
+	
 		nombre++;
 		if(sexe == 'M') {
 			System.out.println("Il s'Agit s'un homme");
 			nombre_homme++;
+			m_sexe = 'm';
 			
 		}
 		else if (sexe == 'F') {
 			System.out.println("Il s'agit d'une femme");
 			nombre_femme++;
+			m_sexe = 'f';
 			
 		}
 		else {
 			System.out.print("La personne ne s'identifie pas comme un homme ni une femme");
 			nombre_ni_femme_ni_femme++;
-			m_sexe = 'U';
+			m_sexe = 'u';
 			
 		}
 	}
@@ -38,7 +42,8 @@ public class Personne {
 	Personne(String nom, String prenom) {
 		m_nom = nom;
 		m_prenom = prenom;
-		m_sexe = 'U';
+
+		m_sexe = 'u';
 		nombre++;
 		nombre_ni_femme_ni_femme++;
 	}
